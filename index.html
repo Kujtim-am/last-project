@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Centrum Co.</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="logoo.png" width="200px">
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Centrum Co.</a></li>
+                <li><a href="kontakti.html">Кoнtakt-Адреса</a></li>
+                <li><a href="INFO@CENTRUM.COM.MK">INFO@CENTRUM.COM.MK</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+
+            <img src="f1.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="foto.jpeg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="2.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="ballina.jpg" style="width:100%">
+
+        </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000);
+        }
+    </script>
+    <div class="row">
+        <div class="columns">
+            <img src="vwlogo.jpg" width="150px">
+        </div>
+        <div class="columns">
+            <img src="vk.jpg" width="150px">
+        </div>
+        <div class="columns">
+            <img src="das.jpg" width="150px">
+        </div>
+        <div class="columns1">
+            <h1>Centrum Co.</h1>
+            <br>
+            <p> Centrum Co.
+                E официјален застапник за возилата од програмата на Volkswagen, Volkswagen Комерцијални Возила, како и
+                возилата од програмата на Skoda, Seat и Audi.<br>На своите клиенти им нуди широка понуда на автомобили
+                од најновата производна програма,користени возила, како и редовно пост-продажно следење на истите.
+            </p>
+            <br>
+            <p><b>Адреса:Маршал Тито 1220, Тетово 1220</b></p>
+            <br><br>
+            <h3>ПРОДАЖБА/СЕРВИС</h3>
+            <h2>044/351-811</h2>
+            <br>
+            <br>
+            <a href="http://centrum.com.mk/" target="blank" class="butoni">Прочитај повеќе</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="partneri">
+            <h1>Партнери</h1>
+        </div>
+        <div class="columns2">
+            <a href="https://www.volkswagen.de/de.html" target="blank"> <img src="yepp.jpg" width="300px"
+                    class="foto"></a>
+            <br>
+            <h1 class="partneret">Volkswagen</h1>
+        </div>
+        <div class="columns2">
+            <a href="http://www.skoda-auto.com/" target="blank"><img src="skoda.jpg" width="300px" class="foto"></a>
+            <h1 class="partneret">Shkoda</h1>
+        </div>
+        <div class="columns2">
+            <a href="https://www.audi.com/en.html" target="blank"><img src="audii.jpg" width="300px" class="foto"></a>
+            <h1 class="partneret">Audi</h1>
+        </div>
+        <div class="columns2">
+            <a href="https://www.seat.com/" target="blank"><img src="sead.jpg" width="300px" class="foto"></a>
+            <h1 class="partneret">Seat</h1>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="columns3">
+                <h1>Продавница за половни возила „Фолксваген“</h1>
+                <br>
+                <p>Oфицијален застапник за возилата од програмата на Volkswagen, Volkswagen Комерцијални Возила, како и
+                    возилата од програмата на Skoda, Seat и Audi.</p>
+                <a href="https://www.facebook.com/centrumtetovo/"><img src="face.png" width="115px"></a>
+                <a href="https://www.instagram.com/centrumco/"><img src="inst.png" width="125px"></a>
+            </div>
+            <div class="hh">
+                <h1>КОНТАКТИРАЈ НЕ</h1>
+                <p>Адреса:Маршал Тито 1220, Тетово 1220</p>
+                <h3>ПРОДАЖБА/СЕРВИС</h3>
+                <h2>044/351-811</h2>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
